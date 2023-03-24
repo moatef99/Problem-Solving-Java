@@ -1,6 +1,6 @@
-package ProblemSolving.Helpers;
+package Helpers;
 
-public  class ConsolePrinter<T>  implements  Printer<T>{
+public  class ConsolePrinter<T>  implements Printer<T> {
 
     @Override
     public void print(T[] arr) {

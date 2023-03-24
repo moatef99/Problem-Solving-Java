@@ -1,4 +1,4 @@
-package ProblemSolving.Basics;
+package Basics;
 
 public class BinarySearch {
     public static Integer getIndexBinarySearch(int [] nums, int number){

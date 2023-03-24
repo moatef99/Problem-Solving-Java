@@ -1,4 +1,4 @@
-package ProblemSolving.Basics;
+package Basics;
 
 import java.util.LinkedList;
 import java.util.Queue;

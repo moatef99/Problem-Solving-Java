@@ -1,4 +1,4 @@
-package ProblemSolving.Helpers;
+package Helpers;
 
 public class ArrayPrintHelper<T> {
     Printer printer;

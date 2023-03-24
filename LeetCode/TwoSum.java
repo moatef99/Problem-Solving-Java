@@ -1,6 +1,6 @@
 package LeetCode;
 
-import ProblemSolving.Helpers.ArrayPrintHelper;
+import Helpers.ArrayPrintHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;

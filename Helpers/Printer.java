@@ -1,4 +1,4 @@
-package ProblemSolving.Helpers;
+package Helpers;
 
 public interface Printer<T> {
     void print (T[] arr);
