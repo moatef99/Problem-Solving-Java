@@ -14,6 +14,7 @@ public class CardTypes {
             this.type = type;
         }
     }
+
     TreeMap<String, Bin> binDb;
     int l = Integer.MAX_VALUE;
 
@@ -34,15 +35,16 @@ public class CardTypes {
     }
 
     public void buildDb(String[][] bins) {
-        this.binDb = new TreeMap<String, Bin>((a,b) -> a.compareTo(b));
-        for(String[] b : bins) {
+        this.binDb = new TreeMap<String, Bin>((a, b) -> a.compareTo(b));
+        for (String[] b : bins) {
             l = Math.min(l, b[0].length());
             Bin bin = new Bin(b[0], b[1], b[2]);
             binDb.put(b[0], bin);
         }
     }
+
     public String matchCard(String cardNo) {
-        cardNo = cardNo.substring(0,0+l);
+        cardNo = cardNo.substring(0, 0 + l);
         String floorKey = binDb.floorKey(cardNo);
         String ceilKey = binDb.ceilingKey(cardNo);
         if (floorKey != null) {

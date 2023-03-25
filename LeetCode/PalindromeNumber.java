@@ -12,25 +12,25 @@ public class PalindromeNumber {
             length++;
         }
 
-      int secondPointer = (int)Math.pow(10,length-1);
-      int first = 0;
-      int last = 0;
-      copy = x;
-      for(int i =0; i<length/2; i++){
-          first = copy % 10;
-          last = (x / secondPointer) % 10;
+        int secondPointer = (int) Math.pow(10, length - 1);
+        int first = 0;
+        int last = 0;
+        copy = x;
+        for (int i = 0; i < length / 2; i++) {
+            first = copy % 10;
+            last = (x / secondPointer) % 10;
 
-          if(first != last)
-              return false;
+            if (first != last)
+                return false;
 
-          copy /= 10;
-          secondPointer /= 10;
-      }
+            copy /= 10;
+            secondPointer /= 10;
+        }
 
-      return true;
+        return true;
     }
 
     public static void main(String[] args) {
-       System.out.println(5<<-2);
+        System.out.println(5 << -2);
     }
 }

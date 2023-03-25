@@ -5,8 +5,10 @@ import java.util.Queue;
 
 public class StackTwoQueues {
 
-    Queue<Integer> pushQueue = new LinkedList<Integer>();;
-    Queue<Integer> topPopQueue =  new LinkedList<Integer>();
+    Queue<Integer> pushQueue = new LinkedList<Integer>();
+    ;
+    Queue<Integer> topPopQueue = new LinkedList<Integer>();
+
     public StackTwoQueues() {
     }
 
@@ -16,12 +18,12 @@ public class StackTwoQueues {
 
     public int pop() {
         int queueSize = pushQueue.size();
-        while(queueSize - 1 > 0){
+        while (queueSize - 1 > 0) {
             topPopQueue.add(pushQueue.poll());
         }
         int pollElement = pushQueue.poll();
 
-        while(topPopQueue.size() > 0){
+        while (topPopQueue.size() > 0) {
             pushQueue.add(topPopQueue.poll());
         }
         return pollElement;
@@ -30,13 +32,13 @@ public class StackTwoQueues {
     public int top() {
         int queueSize = pushQueue.size();
 
-        while(queueSize - 1 > 0){
+        while (queueSize - 1 > 0) {
             topPopQueue.add(pushQueue.poll());
         }
         int peekElement = pushQueue.poll();
         topPopQueue.add(peekElement);
 
-        while(topPopQueue.size() > 0){
+        while (topPopQueue.size() > 0) {
             pushQueue.add(topPopQueue.poll());
         }
         return peekElement;
@@ -49,9 +51,9 @@ public class StackTwoQueues {
     public static void main(String[] args) {
 
         StackTwoQueues obj = new StackTwoQueues();
-          obj.push(1);
+        obj.push(1);
         obj.push(2);
-         System.out.println(obj.pop());
+        System.out.println(obj.pop());
         System.out.println(obj.top());
         System.out.println(obj.empty());
 

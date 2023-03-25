@@ -1,8 +1,9 @@
 package Helpers;
 
 public interface Printer<T> {
-    void print (T[] arr);
-    void print (int[] arr);
+    void print(T[] arr);
+
+    void print(int[] arr);
 
     void print(double[] arr);
 

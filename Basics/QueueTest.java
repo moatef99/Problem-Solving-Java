@@ -12,7 +12,7 @@ public class QueueTest {
         queue.offer(4);
         queue.offer(5);
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             System.out.println(queue.poll());
         }
 

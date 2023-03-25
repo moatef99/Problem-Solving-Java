@@ -2,17 +2,17 @@ package LeetCode;
 
 public class MagicNumber {
 
-    public boolean checkMagicNumber(int num){
+    public boolean checkMagicNumber(int num) {
         return sumNumber(num) == 1;
     }
 
-    public int sumNumber(int num){
-        if(num/10 == 0){
+    public int sumNumber(int num) {
+        if (num / 10 == 0) {
             return num;
         }
 
         int sum = 0;
-        while(num > 0){
+        while (num > 0) {
             sum += num % 10;
             num /= 10;
         }
